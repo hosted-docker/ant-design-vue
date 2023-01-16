@@ -15,6 +15,7 @@ export default {
       'ant-design-vue': path.resolve(__dirname, '../components'),
     },
   },
+  base: '/mirror/ant-design-vue',
   server: {
     host: true,
   },
