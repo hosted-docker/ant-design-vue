@@ -17,16 +17,8 @@ jobs:
         with:
           ref: 'main'
 
-      - name: Install pnpm
-        run: npm i pnpm@7 -g
-
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '18'
-          cache: 'pnpm'
-
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
  
       - name: build
         run: npm run site
