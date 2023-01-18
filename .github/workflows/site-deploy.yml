@@ -19,9 +19,14 @@ jobs:
 
       - name: Install dependencies
         run: npm install
- 
+
+      - name: install increase-memory-limit
+        run: npm install -g increase-memory-limit
+      - name: increase-memory-limit  
+        run: increase-memory-limit
+
       - name: build
-        run: npm run site --max_old_space_size=4096
+        run: npm run site
 
 
       - name: Build and push Docker images
